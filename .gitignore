@@ -1,0 +1,11 @@
+.DS_STORE
+.vagrant
+/src/components/*
+node_modules
+.sass-cache
+.sass-cache/*
+npm-debug.log
+/admin.laravel-rest.dev/public/*
+/laravel-rest.dev/fe-l5/vendor
+/laravel-rest.dev/fe-l5/.env.*.php
+/laravel-rest.dev/fe-l5/.env.php

@@ -1,0 +1,47 @@
+.panel {
+	//border: 1px solid $lt-grey;
+	background-color: $lt-grey;
+	border-top: 5px solid $action-color;
+	box-shadow: 0 0 2px -1px $black;
+	margin-bottom: $base-spacing;
+
+	@include breakpoint($min768) {
+		@include span(6 of 12);
+		&:nth-child(even) {
+			@include span(6 of 12 last);
+		}
+    }
+    @include breakpoint($min960) {
+		@include span(3 of 12);
+		&:nth-child(even) {
+			@include span(3 of 12);
+		}
+		&:nth-child(4n) {
+			@include last;
+		}
+    }
+	
+	h3 {
+		padding: 10px 20px;
+	}
+	
+	.panel-content {
+		padding: 20px;
+	}
+	
+	.has-embed {
+		p {
+			position: relative;
+			width: 100%;
+			padding: 56.25% 0 0 0;
+			
+			iframe {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+}

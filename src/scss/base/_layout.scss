@@ -1,0 +1,45 @@
+/* ==============================
+    
+    BASE / layout
+    
+============================== */
+$susy: (
+  columns: 12,
+  math: fluid,
+  flow: ltr,
+  gutters: 1/3,
+  use-custom: (
+      box-sizing: false,
+      clearfix: true,
+  )
+);
+
+
+.l-wrapper {
+    max-width: 1440px;
+    padding: 0 16px;
+    margin: 0 auto;
+    @include clearfix;
+    @include breakpoint($min960) {
+        padding: 0 24px;
+    }
+    @include breakpoint($min1100) {
+        padding: 0 30px;
+    }
+}
+
+.l-row {
+    width: 100%;
+    @include clearfix;
+}
+
+.container {
+    overflow: hidden;
+}
+
+main {
+    padding: 30px 0 40px;
+    @include breakpoint($min960) {
+        padding: 40px 0 60px;
+    }
+}

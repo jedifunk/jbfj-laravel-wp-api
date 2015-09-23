@@ -1,0 +1,49 @@
+/* ==============================
+    
+    BASE / variables
+    
+    Includes only variables for use in the rest of the stylesheet by SASS. Can be colors, media query strings to pass through breakpoint, and font variables.
+    
+============================== */
+
+/* Colors */
+$white: #FFFFFF;
+
+//the blackest black to use on any site.
+$black: #404040;
+
+$lt-grey: #fcfcfc;
+$action-color: #0072ff;
+
+/* ===== Typography ===== */
+
+// Typography
+$base-font-family: 'Helvetica', sans-serif;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Font Colors
+$base-font-color: $black;
+
+/* ===== Media Queries ===== */
+
+/* Designed to be used with the Sass plugin, Breakpoint. Use @include breakpoint($var) nested directly in your style blocks to keep media queries attached to objects, modules, etc;
+/* Add and subtract to your hearts content. There is no breakpoint: http://seesparkbox.com/foundry/there_is_no_breakpoint */
+
+$min500: 500px;
+$min768: 768px;
+$min960: 960px;
+$min1100: 1100px;
+$min1400: 1400px;
+$min1600: 1600px;

@@ -1,0 +1,69 @@
+/* ==============================
+    
+    BASE / base
+    
+    Includes base global styles for major, non-typographical elements. Should be almost exclusively single element, attribute, psuedo-class, child and sibling selectors.
+    
+============================== */
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+html, body, form {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: white;
+}
+
+nav {
+    ul {
+        text-align: left;
+    }
+    li {
+        display: inline-block;
+    }
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  &%default-ul {
+    list-style-type: disc;
+    margin-bottom: $small-spacing;
+    padding-left: $base-spacing;
+  }
+
+  &%default-ol {
+    list-style-type: decimal;
+    margin-bottom: $small-spacing;
+    padding-left: $base-spacing;
+  }
+}
+
+dl {
+    margin: 0;
+	margin-bottom: $small-spacing;
+
+  dt {
+    font-weight: bold;
+    margin-top: $small-spacing;
+  }
+
+  dd {
+    margin: 0;
+  }
+}

@@ -1,7 +1,7 @@
 # Laravel & WP-API Playground
+Learning new techniques and playing with new tools.
 
-### Learning new techniques and playing with new tools.
-Setup and Tooling
+#### Setup and Tooling
 - Scotchbox Vagrant Box
 - Gulp
 - Bower

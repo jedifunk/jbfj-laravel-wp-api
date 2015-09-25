@@ -4,14 +4,17 @@
   background-color: $action-color;
   border: none;
   color: $white;
+  font-family: $secondary-font-family;
   cursor: pointer;
   display: inline-block;
   font-size: $base-font-size;
-  font-weight: 400;
+  font-weight: 700;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.1;
-  padding: 11px 14px 8px;
-  // text-transform: uppercase;
+  height: 36px;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: uppercase;
   text-decoration: none;
   text-align: left;
   user-select: none;
@@ -33,4 +36,8 @@
   &.button-block {
 	width: 100%;
   }
+}
+
+.flex-btn {
+	margin-top: auto;
 }

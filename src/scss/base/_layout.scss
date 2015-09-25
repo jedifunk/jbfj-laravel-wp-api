@@ -3,29 +3,11 @@
     BASE / layout
     
 ============================== */
-$susy: (
-  columns: 12,
-  math: fluid,
-  flow: ltr,
-  gutters: 1/3,
-  use-custom: (
-      box-sizing: false,
-      clearfix: true,
-  )
-);
-
 
 .l-wrapper {
     max-width: 1440px;
     padding: 0 16px;
     margin: 0 auto;
-    @include clearfix;
-    @include breakpoint($min960) {
-        padding: 0 24px;
-    }
-    @include breakpoint($min1100) {
-        padding: 0 30px;
-    }
 }
 
 .l-row {
@@ -42,4 +24,52 @@ main {
     @include breakpoint($min960) {
         padding: 40px 0 60px;
     }
+}
+
+// Flexbox Experiments
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 1em -1em;
+}
+.flex-item {
+	display: flex;
+	padding: 1em 0 0 1em;
+	width: 100%;
+	
+	@include breakpoint ($min500) {
+		width: 50%;
+	}
+	@include breakpoint ($min960) {
+		width: 25%;
+	}
+}
+.flex-panel {
+	display: flex;
+	flex-direction: column;
+	background-color: $white;
+	border-top: 5px solid $action-color;
+	box-shadow: 0 0 2px -1px $black;
+	padding: 20px;
+	width: 100%;
+	
+	h3 {
+		padding-bottom: 10px;
+	}
+	
+	.panel-content {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 2em;
+		
+		p {
+			flex: 1 0 auto;
+		}
+	}
+	
+	iframe, img {
+		width: 100%;
+		height: auto;
+		align-self: center;
+	}
 }

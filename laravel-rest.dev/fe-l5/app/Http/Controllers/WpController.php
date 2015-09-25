@@ -1,28 +1,29 @@
-<?php
-
-namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use GuzzleHttp\Client;
+use App\Helpers\Contracts\WpApiContract;
 
 class WpController extends Controller
 {
+	
+/*
+	public function __construct(Wp $wp)
+	{
+		$this->wp = $wp;
+	}
+*/
 
-    public function index()
+    public function index(WpApiContract $wp_client)
 	{	
-		$url = 'http://admin.laravel-rest.dev/wp-json/wp/v2/posts';
+		$posts = $wp_client->getPosts();
 		
-		$client = new Client();
-		
-		$response = $client->get($url);
-		$posts = json_decode($response->getBody());
+		$posts = json_decode($posts);
 		
 		//dd($posts);
 		
-		return view('layouts.test', compact('posts'));
+		return view('layouts.index', compact('posts'));
 	}
 
     /**
